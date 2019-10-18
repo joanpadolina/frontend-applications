@@ -1,6 +1,11 @@
 # Vue setup
 
-Voor dit project
+Voor dit project maak ik gebruik van de Framework: Vue.
+
+## Concept
+
+Roken is nu veel anders dan vroeger. Doordat het meer een dagelijkse behoefte is was een waterpijpen van vroeger meer bijzonder. 
+Het doel van dit project is het ophalen van Data uit de Tropen museum met een SparQl code naar een JSON file. Deze data wil daarna ik mijn static html plaatsen en dit dynamisch kunnen renderen. 
 
 ## Project setup
 ```

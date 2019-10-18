@@ -1,7 +1,5 @@
-body {
-  color: blue;
+h1{
+  background-color:blue;
 }
-
-body h1 {
-  background: red;
-}
+h2{
+    background:red;}

@@ -1,23 +1,34 @@
 <template id="content">
   <div class="content-api">
-    <ul>
-      <li>Content vue</li>
-    </ul>
-  </div>
+      <h2>Content vue</h2>
+    <div class="container-info" 
+      v-for="result in results"
+      v-bind:result="result"
+      v-bind:key="result.id">
+      <h2>
+        {{result.title}}
+      </h2>
+      <div class="image">
+      <img v-bind:src="result.img">
+      <!-- {{result.img.value}} -->
+      </div>
+      <p>
+        {{result.placeName}}
+      </p>
+    </div>
+</div>
 </template>
 
 <script type="text/javascript">
-
+import App from "../App.vue"
 export default {
+      component:{
+    App
+},
+    data(){
+      return{
 
-//     data(){
-//       return{
-//         objecten:[
-//             {title: ''},
-//             {herkomst:''},
-//             {img: ''}
-// ]
-// }}
+}}
 }
 
 

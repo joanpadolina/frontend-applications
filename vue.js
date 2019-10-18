@@ -1,14 +1,16 @@
-console.log('yo');
 let Vue = require('vue');
-let HtmlWebpackPlug = require('html-webpack-plugin');
-let path = require('path');
-let webpack = require('webpack');
-let express = require('express');
-
+var webpack = require('webpack');
 
 new Vue({
   render (h) {
-    return h('app', this.hi)
+    return h('div', this.hi)
+  }
+})
+
+let app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
   }
 })
 

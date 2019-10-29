@@ -30,5 +30,19 @@ npm run build
 npm run lint
 ```
 
+
+### Wat gebeurt er eigenlijk?
+
+Dit project maakt gebruik van van SPARQL queries om bestanden van het Tropenmuseum te verkrijgen.
+De VUE Framework zorgt voor dat alle dynamische data met een stijling te zien is op de Client side.
+Door Sass the implementeren worden deze stijling weer omgezet naar css bestanden.
+
+### Credits
+
+Laurens
+Stackoverflow
+Gast sprekers
+Ivo
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

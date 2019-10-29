@@ -30,6 +30,8 @@ npm run build
 npm run lint
 ```
 
+### Data in JSON
+![data](https://i.imgur.com/9KkcSBe.png)
 
 ### Wat gebeurt er eigenlijk?
 

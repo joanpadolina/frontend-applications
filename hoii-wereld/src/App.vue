@@ -1,19 +1,37 @@
 <template>
 <div id="app">
-  <img alt="Vue logo" src="./assets/tropenmuseum.jpg">
-<h1>Lijst met data's</h1>
+  <img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png">
+<div class="con_svg">
+<!-- {{Header}} -->
+<img class="rlogo" alt="logo roken" src="./assets/roken_logo.svg">  
 
-  
-<div class="container-info" 
+</div>
+<!-- <div class="fire1">
+  <img class="fire" alt="fire" src="./assets/fire.gif">
+</div> -->
+<h1></h1>
+
+  <!-- <div class="search-wrapper">
+    <input type="text" v-model="search" placeholder="Search title.."/>
+        <label>Search title:</label>
+  </div>
+   -->
+<select >
+<option v-for="result in results">{{result.placeName}}</option>
+</select>
+
+
+<div class="container-info">
+<div class="content" 
   v-for="result in results"
   v-bind:result="result"
   v-bind:key="result.id">
-<div class="content">
   <h2>
-        {{result.title}}
+        {{result.typeLabel}}
       </h2>
         <div class="image">
-        <img v-bind:src="result.img">
+        
+       <img v-bind:src="result.img">
         <!-- {{result.img.value}} -->
         </div>
       <p>
@@ -27,14 +45,14 @@
 
 
 <script>
+/*eslint 'no-console':0*/
 import Vue from 'vue'
-import Content from './components/Content.vue'
+// import Content from './components/Content.vue'
+// import Header from './components/Header.vue'
 
 
 export default {
-  components: {
-    Content
-  },
+
   data() {
     return {
       results: [],
@@ -85,6 +103,7 @@ this.fetchSparqlData(this.endpoints.nmvw, query)
   				return {
   				// 	//I've added an id value because that helps Vue distinguish different items later on
   					id: id,
+            cho: result.cho.value,
   					placeName: result.placeName.value,
   					title: result.title.value,
             typeLabel:result.typeLabel.value,
@@ -92,6 +111,7 @@ this.fetchSparqlData(this.endpoints.nmvw, query)
   				// 	//If you're confused about this next line, try experimentig with split+pop on a string
   				// 	// in your browser
   					// label: result.label.value
+          
   				}
   			})
   		})
@@ -110,9 +130,12 @@ this.fetchSparqlData(this.endpoints.nmvw, query)
 			const data = response.json()
 			return data
 		}
-	}
+},
+computed:{
 
 }
+	}
+
 
 
 
@@ -130,9 +153,9 @@ this.fetchSparqlData(this.endpoints.nmvw, query)
   color: #2c3e50;
   margin-top: 60px;
 }
-img{
-  width:40%;
-  height:40%; 
-  }
+// img{
+//   width:40%;
+//   height:40%; 
+//   }
 
 </style>

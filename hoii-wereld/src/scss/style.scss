@@ -1,10 +1,90 @@
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    // background: black;
+    background-repeat: no-repeat;
+    height:100vh;
+  }  
+
+.fire1{
+  display: block;
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+  margin: 0 auto;
+  top: 0;
+}
+.fire{
+  width:32em;
+}
+
+.trlogo{
+    width:10em;
+    top:0em;
+    float: left;
+    display:block;
+    position: absolute;
+  }
+.con_svg{
+  height:100vh;
+  margin:0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  }
+  .rlogo{
+    margin: 0 auto;
+    width: 20em;
+    color: white;  
+}
 
 h1{
   font-size:2em;
 }
+
+h2{
+  float: left;
+  max-width: 10em;
+  max-height:20em;
+  top: 5em;
+  left:-1em;
+  font-size: 2em;
+  display: block;
+  background: lightgoldenrodyellow;
+  position: relative;
+}
+div.content-1{
+  width:25em;
+  height:20em;
+  background:red;
+}
+div.content-2{
+  width:25em;
+  height:20em;
+  background:blue;
+}
+p{
+  float: left;
+  display: block;
+  position: relative;
+  top:-15em;
+  left: 2em;
+}
 div.container-info{
-  margin:0;
-  padding:0;
   display:flex;
-  
+  flex-wrap:wrap;
+  div.content{
+    height:25em;
+    margin: 3em auto;
+          box-shadow: 3px 2px 3px 1px rgba(255,255,255,0.09);  
+    img{
+      object-fit: cover;
+      width: 25em;
+      height:15em;
+      margin: 4em auto;
+
+    }
+  }
 }

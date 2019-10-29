@@ -1,6 +1,12 @@
 <template>
-  <div>
-
+  <div> 
+  <nav>
+    <ul>
+      <li>jie</li>
+      <li>jie</li>
+      <li>jie</li>
+    </ul>
+  </nav>
   </div>
 </template>
 

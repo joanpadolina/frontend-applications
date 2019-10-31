@@ -66,7 +66,7 @@ export default {
            dc:title ?title .
 
       ?place skos:prefLabel ?placeName .
-    } LIMIT 50
+    } LIMIT 5
     `
   this.fetchSparqlData(this.endpoints.nmvw, query)
 		//Extract the nested data from that json. This nesting will be different for every API btw

@@ -2,9 +2,9 @@
   <div> 
   <nav>
     <ul>
-      <li>jie</li>
-      <li>jie</li>
-      <li>jie</li>
+      <li>ondek</li>
+      <li>creëer</li>
+      <li>de data</li>
     </ul>
   </nav>
   </div>
@@ -13,8 +13,6 @@
 <script>
 export default {
   name: 'Header',
-  props: {
-    msg: String
-  }
+  props:''
 }
 </script>

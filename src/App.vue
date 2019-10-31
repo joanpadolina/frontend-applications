@@ -1,11 +1,14 @@
 <template>
 <div id="app">
+
   <img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png">
+<Header />
 <div class="con_svg">
 <!-- {{Header}} -->
 <img class="rlogo" alt="logo roken" src="./assets/roken_logo.svg">  
 
 </div>
+<Map />
 <!-- <div class="fire1">
   <img class="fire" alt="fire" src="./assets/fire.gif">
 </div> -->
@@ -42,11 +45,14 @@
 <script>
 /*eslint 'no-console':0*/
 import Data from './components/Data'
-
+import Header from './components/Header'
+import Map from './components/Map'
 export default {
   name: 'app',
   components:{
-    Data
+    Data,
+    Header,
+    Map
 },
   props:{
     // results:Array,

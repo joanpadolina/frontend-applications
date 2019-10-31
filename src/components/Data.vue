@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h1>Data Comp</h1>
       <div class="container-info">
         <div class="content" 
@@ -118,3 +117,4 @@ export default {
 }
 
 </script>
+

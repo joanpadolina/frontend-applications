@@ -1,3 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="197" viewBox="0 0 128 197">
-  <polygon fill="#929DC8" fill-rule="evenodd" stroke="#979797" points="442 503.947 452.125 474.599 503.243 471 518.5 474.599 526.496 494.642 567.57 513.253 567.57 518.577 552.242 560.59 539.394 574.546 531.639 595.835 509.128 615.885 506.052 642.983 518.5 666.129 473.079 628.653 475.301 558.451 465.355 548.051" transform="translate(-441 -470)"/>
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <polygon fill="#929DC8" stroke="#979797" points="0 32.947 10.125 3.599 61.243 0 76.5 3.599 84.496 23.642 125.57 42.253 125.57 47.577 110.242 89.59 97.394 103.546 89.639 124.835 67.128 144.885 64.052 171.983 76.5 195.129 31.079 157.653 33.301 87.451 23.355 77.051"/>
+    <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="20" font-weight="bold" letter-spacing="-1.038">
+      <tspan x="36" y="67">Zuid-</tspan> <tspan x="36" y="93">Amerika</tspan>
+    </text>
+  </g>
 </svg>

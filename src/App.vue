@@ -1,6 +1,5 @@
 <template>
 <div id="app">
-
   <img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png">
 <Header />
 <div class="con_svg">

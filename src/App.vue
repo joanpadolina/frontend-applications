@@ -1,41 +1,13 @@
 <template>
 <div id="app">
-  <img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png">
 <Header />
+<img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png">
+<router-view></router-view>
 <div class="con_svg">
-<!-- {{Header}} -->
 <img class="rlogo" alt="logo roken" src="./assets/roken_logo.svg">  
-
 </div>
 <Map />
-<!-- <div class="fire1">
-  <img class="fire" alt="fire" src="./assets/fire.gif">
-</div> -->
-
-  <!-- <div class="search-wrapper">
-    <input type="text" v-model="search" placeholder="Search title.."/>
-        <label>Search title:</label>
-  </div>
-   -->
-<!-- <select >
-<option v-for="result in results">{{result.placeName}}</option>
-</select> -->
-
-  <Data />
-
-<!-- 
-<div class="container-info">
-<div class="content" 
-  v-for="result in results"
-  v-bind:result="result"
-  v-bind:key="result.id">
-  <h2>{{result.typeLabel}}</h2>
-  <div class="image">   <img v:on-click="addTo" v-bind:src="result.img"> </div>
-      <p>
-        {{result.placeName}}
-      </p>
-</div> 
-</div> -->
+<Data />
 
 </div>
 </template>

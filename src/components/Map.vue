@@ -1,18 +1,16 @@
 <template>
 <div>
-<h1>
-map component
-</h1>
+
 <div class="map-contain">
   
 
 <div class="map-static">
-  <img class="noord" src="../assets/svg/noordam.svg">
-  <img class="zuid" src="../assets/svg/zuidam.svg">
-  <img class="eu" src="../assets/svg/europa.svg">
-  <img class="af" src="../assets/svg/afrika.svg">
-  <img class="az" src="../assets/svg/azie.svg">
-  <img class="au" src="../assets/svg/austra.svg">
+  <img class="noord hover-click" src="../assets/svg/noordam.svg">
+  <img class="zuid hover-click" src="../assets/svg/zuidam.svg">
+  <img class="eu hover-click" src="../assets/svg/europa.svg">
+  <img class="af hover-click" src="../assets/svg/afrika.svg">
+  <img class="az hover-click" src="../assets/svg/azie.svg">
+  <img class="au hover-click" src="../assets/svg/austra.svg">
 </div>
 </div>
 
@@ -41,8 +39,10 @@ export default{
   width:80vw;
   justify-content: center;
 }
+.hover-click:hover{
+  border:darkslategrey solid .2em;
+}
 .noord{
-  
 }
 .zuid{
   

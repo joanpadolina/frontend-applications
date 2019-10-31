@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Data Comp</h1>
+    <h1>De voorwerpen </h1>
       <div class="container-info">
         <div class="content" 
           v-for="result in results"

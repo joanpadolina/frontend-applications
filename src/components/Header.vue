@@ -1,10 +1,12 @@
 <template>
   <div class="headercss"> 
   <nav>
+
+<router-view></router-view>
     <ul>
-      <li>ondek</li>
-      <li>creëer</li>
-      <li>de data</li>
+      <li><a href="/">ondek</a></li>
+      <li><a href="#">creëer</a></li>
+      <li><router-link to="/detailpagina">de data</router-link></li>
     </ul>
   </nav>
   </div>
@@ -13,12 +15,13 @@
 <script>
 export default {
   name: 'Header',
-  props:''
+  props:'',
 }
 </script>
-<style scope>
+<style>
 ul{
   position: absolute;
+  z-index: 99;
 }
 li{
   list-style-type: none;
@@ -29,8 +32,13 @@ li{
     left: -2em;
     padding: 1em;
 }
-li:hover{
-  font-weight:2em;
+a{
+  text-decoration: none;
+  color:slategrey;
+}
+a:hover{
+  color:darkslategrey;
+  font-weight:600;
   cursor:pointer;
 }
 </style>

@@ -1,17 +1,23 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueRouter from 'vue-router'
+import Detailmap from '@/pages/Detailmap.vue'
 
-library.add(faUserSecret)
+Vue.use(VueRouter);
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+const routes =[
+  { path: '/detailmap', component: Detailmap }
+];
+
+const router = new VueRouter({
+  routes
+})
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  render: h => h(App),  
+  router,
 }).$mount('#app')
 
 

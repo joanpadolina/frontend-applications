@@ -57,6 +57,7 @@ h2{
   padding:.2em;
   width:10em;
   border-radius: 2em;
+  z-index: 1;
 }
 p{
   float: left;
@@ -94,10 +95,17 @@ div.container-info{
    }
     img{
       object-fit: cover;
-      margin: 4em auto;
-      // border:cadetblue solid .2em;
-      // border-radius: .5em;
-      box-shadow: 3px 2px 3px 1px rgba(255,255,255,0.09);  
+          margin: 4em auto;
+          height: 26em;
+          top: -4em;
+          display: block;
+          position: relative;
+          width: 14em;
+          -webkit-box-shadow: 3px 2px 3px 1px rgba(255, 255, 255, 0.09);
+          box-shadow: 3px 2px 3px 1px rgba(255, 255, 255, 0.09);
+
+
+
 
       &:hover{
             border:gray solid .2em;

@@ -29,7 +29,9 @@ npm run build
 ```
 npm run lint
 ```
+### Data opzet
 
+![data](https://github.com/joanpadolina/frontend-applications/blob/master/wiki-image/data.png)
 
 ### Wat gebeurt er eigenlijk?
 

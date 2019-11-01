@@ -1,6 +1,6 @@
 # Vue setup
 
-Voor dit project maak ik gebruik van het Framework: Vue.
+Voor dit project maak ik gebruik van het Framework: **Vue**.
 
 ## Concept
 
@@ -9,7 +9,14 @@ Voor dit project maak ik gebruik van het Framework: Vue.
 Roken is nu veel anders dan vroeger. Doordat het meer een dagelijkse behoefte is was een waterpijpen van vroeger meer bijzonder. Daarbij is de website bedoeld om een eigen collectie te maken van de verschillende rookgerei.
 Het doel van dit project is het ophalen van Data uit de Tropen museum met een SparQl code naar een JSON file. Deze data wil daarna ik mijn static html plaatsen en dit dynamisch kunnen renderen. 
 
-
+## Git clone
+```
+git clone https://github.com/joanpadolina/frontend-applications.git
+```
+## Lokaal opzet
+```
+In de webbrowser localhost/8080
+```
 ## Project setup
 ```
 npm install
@@ -24,11 +31,8 @@ npm run serve
 ```
 npm run build
 ```
+Na het builden krijg je een dist map die al je vue comprimeert.
 
-### Lints and fixes files
-```
-npm run lint
-```
 ### Data opzet
 
 ![data](https://github.com/joanpadolina/frontend-applications/blob/master/wiki-image/data.png)

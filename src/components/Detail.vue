@@ -4,6 +4,9 @@
     <div class="App">
       <div class="wrapper">
         <div class="workspace" ref="workspace">
+
+<!-- Dit is de voorbeeld code van vue-free-transform -->
+
           <FreeTransform
             v-for="element in elements"
             :key="element.id"
@@ -46,6 +49,11 @@ import FreeTransform from 'vue-free-transform'
   props:{
       results:[],
 },
+
+// Dit is de voorbeeld code van vue-free-transform !
+// Ik wilde in ieder geval laten zien dat er een package bestaat voor mijn concept.
+// Als ik meer tijd heb gehad zou ik de opgeslagen foto's in de blokken zetten.
+
   data() {
     return {
       elements: [

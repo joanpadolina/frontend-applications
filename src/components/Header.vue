@@ -1,12 +1,10 @@
 <template>
   <div class="headercss"> 
   <nav>
-
-<router-view></router-view>
     <ul>
-      <li><a href="/">ondek</a></li>
-      <li><a href="#">creëer</a></li>
-      <li><router-link to="/detailpagina">de data</router-link></li>
+      <li><router-link to="/">home</router-link></li>
+      <li><router-link to="/map">map-view</router-link></li>
+      <li><router-link to="/data">de data</router-link></li>
     </ul>
   </nav>
   </div>

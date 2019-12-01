@@ -2,12 +2,12 @@
 <div id="app">
 <Header />
 <img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png">
-<router-view></router-view>
 <div class="con_svg">
 <img class="rlogo" alt="logo roken" src="./assets/roken_logo.svg">  
 </div>
-<Map />
-<Data />
+<router-view/>
+<!-- <Map />
+<Data /> -->
 
 </div>
 </template>
@@ -15,15 +15,12 @@
 
 <script>
 /*eslint 'no-console':0*/
-import Data from './components/Data'
 import Header from './components/Header'
-import Map from './components/Map'
+// import Map from './components/Map'
 export default {
   name: 'app',
   components:{
-    Data,
     Header,
-    Map
 },
   props:{
     // results:Array,

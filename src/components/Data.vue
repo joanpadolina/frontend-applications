@@ -14,21 +14,20 @@
                 <!-- {{result.img.value}} --> 
             </div>
             <p>
-              {{result.placeName}}
+              {{result.continentLabel}}
             </p>
       </div>
     </div>
-    <Detail />
+    <!-- <Detail /> -->
   </div>
 </template>
 <script>
 /*eslint 'no-console':0*/
-import Detail from './Detail'
+// import Detail from './Detail'
 
 export default {
   name:'Data',
   components: {
-      Detail,
       
 },
   props:['this.results'],
@@ -55,17 +54,18 @@ export default {
     PREFIX edm: <http://www.europeana.eu/schemas/edm/>
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-    SELECT ?cho ?title ?typeLabel ?placeName ?img WHERE {
+    SELECT ?cho ?title ?typeLabel ?img ?continentLabel WHERE {
     <https://hdl.handle.net/20.500.11840/termmaster14607>  skos:narrower* ?type . #de termmaster van rookgerei
           ?type skos:prefLabel ?typeLabel . #hier wil ik de naam terug krijgen van het type 
         ?cho edm:isShownBy ?img . #ophalen van de img linkjes
           ?cho edm:object ?type;
                dc:title ?title .  # hier wil ik de titel van het voorwerp
-      ?cho dct:spatial ?place ;
-           dc:title ?title .
+  <https://hdl.handle.net/20.500.11840/termmaster2> skos:narrower ?continent .
+  ?continent skos:prefLabel ?continentLabel .
+  ?continent skos:narrower* ?place .
+  ?cho dct:spatial ?place .
 
-      ?place skos:prefLabel ?placeName .
-    } LIMIT 5
+    } LIMIT 10
     `
   this.fetchSparqlData(this.endpoints.nmvw, query)
 		//Extract the nested data from that json. This nesting will be different for every API btw
@@ -79,7 +79,7 @@ export default {
 				// 	//I've added an id value because that helps Vue distinguish different items later on
 					id: id,
           cho: result.cho.value,
-					placeName: result.placeName.value,
+					continentLabel: result.continentLabel.value,
 					title: result.title.value,
           typeLabel:result.typeLabel.value,
           img:result.img.value
@@ -118,3 +118,36 @@ export default {
 
 </script>
 
+<style scoped>
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  float: left;
+  top: 2.5em;
+  left: 0em;
+  height: 2em;
+  font-size: 1em;
+  display: block;
+  background: lightgoldenrodyellow;
+  position: relative;
+  padding: .2em;
+  width: 18em;
+  border-radius: 1em 1em 0em 0em;
+  z-index: 1;
+}
+
+p {
+  float: left;
+  display: block;
+  position: relative;
+  top: -1em;
+  background: black;
+  padding: .1em;
+  color: white;
+  width: 13em;
+  left: 3em;
+  font-size: 1em;
+}
+</style>

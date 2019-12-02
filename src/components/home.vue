@@ -6,7 +6,7 @@
         Een verzameling van allerlei gekke dingen!
     </p>
 </div>
-</template> 
+</template>
 
 <script>
 export default {

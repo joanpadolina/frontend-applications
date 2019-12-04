@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="map-contain">
+          <h1>Verzameling rond de wereld!</h1>
       <div class="map-static">
         <svg
           width="815px"
@@ -236,6 +237,7 @@
     <div>
       <!-- {{selectedContinent}} -->
     </div>
+
     <div class="container-info">
       <div class="content" v-for="result in continents.items" v-bind:result="result" v-bind:key="result">
         <!-- <h2>{{result.title}}</h2> -->
@@ -246,9 +248,7 @@
         <!-- <p>{{result.typeLabel}}</p> -->
       </div>
     </div>
-    <select v-model="results.continent">
-      <option v-for="continent in continenten">{{continent}}</option>
-    </select>
+
   </div>
 </template>
 
@@ -321,16 +321,6 @@ export default {
       })
       //Store the results in app.data
       .then(results => {
-        // console.log("map Results", results);
-        // let groupedResults = results
-        // _.chain(this.results)
-        //   .groupBy("continentLabel")
-        //   .map((value, key) => ({
-        //     continentLabel: key,
-        //     items: value
-        //   }))
-        //   .value();
-
         this.results = results;
   
       });
@@ -366,30 +356,6 @@ export default {
           this.continents = data
         }
       });
-    }
-  },
-  computed: {
-    selectedContinent() {
-      console.log("check", targetContinent);
-    },
-    continentCategory() {
-      // console.log(
-      // _.chain(this.results)
-      // .groupBy('continentLabel')
-      // .map((value, key) => ({
-      //   continentLabel:key,
-      //   items:value}))
-      // .value())
-
-      // return;
-      // _.chain(this.results)
-      //   .groupBy("continentLabel")
-      //   .map((value, key) => ({
-      //     continent: key,
-      //     items: value
-      //   }))
-      //   .value();
-      // return _.groupBy(this.results, 'continentLabel')
     }
   }
 };

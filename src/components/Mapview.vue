@@ -236,13 +236,19 @@
     <div>
       <!-- {{selectedContinent}} -->
     </div>
-    <div v-for="group, continent in results">
-      <p>{{continentCategory}}</p>
+    <div class="container-info">
+      <div class="content" v-for="result in continents.items" v-bind:result="result" v-bind:key="result">
+        <!-- <h2>{{result.title}}</h2> -->
+        <div class="image">
+          <img v-bind:src="result.img" alt="data" />
+          <!-- {{result.img.value}} -->
+        </div>
+        <!-- <p>{{result.typeLabel}}</p> -->
+      </div>
     </div>
     <select v-model="results.continent">
       <option v-for="continent in continenten">{{continent}}</option>
     </select>
-    <div><p>{{groupContinent}}</p></div>
   </div>
 </template>
 
@@ -257,14 +263,14 @@ export default {
     return {
       image: null,
       results: [],
-      continent: "",
+      continents:[],
       src: require,
       endpoints: {
         nmvw:
           "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-12/sparql"
       },
-      continenten:['Azië', 'Afrika', 'Eurazië', 'Oceanië', 'Amerika']
-    }
+      continenten: ["Azië", "Afrika", "Eurazië", "Oceanië", "Amerika"]
+    };
   },
   // Laurens code voor het ophalen van de api met SparQL
   mounted() {
@@ -315,13 +321,18 @@ export default {
       })
       //Store the results in app.data
       .then(results => {
-        console.log("map Results", results);
-        // const Array = results;
-        // const Property = "continentLabel";
-        // const valueContinent = _.groupBy(Array, Property);
+        // console.log("map Results", results);
+        // let groupedResults = results
+        // _.chain(this.results)
+        //   .groupBy("continentLabel")
+        //   .map((value, key) => ({
+        //     continentLabel: key,
+        //     items: value
+        //   }))
+        //   .value();
 
         this.results = results;
-    
+  
       });
   },
   methods: {
@@ -340,62 +351,45 @@ export default {
       const targetContinent = event.target.id;
 
       console.log(targetContinent);
-      // console.log(this.results) 
+      // console.log(this.results)
 
-      let groupContinent =
-      _.chain(this.results)
-      .groupBy('continentLabel')
-      .map((value, key) => ({
-        continentLabel:key, 
-        items:value}))
-      .value()
-
-
-      groupContinent.forEach(data => {
-        if(targetContinent === data.continentLabel){
-          console.log(data)
-          return data
+      let groupContinent = _.chain(this.results)
+        .groupBy("continentLabel")
+        .map((value, key) => ({
+          continentLabel: key,
+          items: value
+        }))
+        .value();
+     groupContinent.filter(data => {
+        if (targetContinent === data.continentLabel) {
+          console.log(data);
+          this.continents = data
         }
-      })
-
-
-    //   if(continentLabel === targetContinent){
-    //     console.log(this.results, event.target)
-    //   } else console.log(continent)
-    //   return targetContinent;
-    // }
-  }},
-  watcher: {
-    selectedCategory() {
-      this.results;
+      });
     }
   },
   computed: {
     selectedContinent() {
       console.log("check", targetContinent);
     },
-    continentCategory(){
+    continentCategory() {
       // console.log(
       // _.chain(this.results)
       // .groupBy('continentLabel')
       // .map((value, key) => ({
-      //   continentLabel:key, 
+      //   continentLabel:key,
       //   items:value}))
       // .value())
 
-      return
-      _.chain(this.results)
-      .groupBy('continentLabel')
-      .map((value, key) => ({
-        continent:key, 
-        items:value}))
-      .value()
+      // return;
+      // _.chain(this.results)
+      //   .groupBy("continentLabel")
+      //   .map((value, key) => ({
+      //     continent: key,
+      //     items: value
+      //   }))
+      //   .value();
       // return _.groupBy(this.results, 'continentLabel')
-    }
-  },
-  filters: {
-    continentDynamic() {
-      return this.results.targetContinent;
     }
   }
 };

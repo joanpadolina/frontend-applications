@@ -2,6 +2,8 @@
 
 Voor dit project maak ik gebruik van het Framework: **Vue**.
 
+![Map](https://github.com/joanpadolina/frontend-applications/blob/master/wiki-image/mapview.gif)
+
 ## Concept
 
 ![concept](https://github.com/joanpadolina/frontend-applications/blob/master/wiki-image/conceptJoan.png)

@@ -11,7 +11,6 @@
           </h2>
           <div class="image">  
              <img v-on:click="clickOnProduct()" v-bind:src="result.img" alt="data" >
-                <!-- {{result.img.value}} --> 
             </div>
             <p>
               {{result.continentLabel}}
@@ -23,7 +22,7 @@
 </template>
 <script>
 /*eslint 'no-console':0*/
-// import Detail from './Detail'
+
 
 export default {
   name:'Data',

@@ -235,17 +235,13 @@
       </div>
     </div>
     <div>
-      <!-- {{selectedContinent}} -->
     </div>
 
     <div class="container-info">
       <div class="content" v-for="result in continents.items" v-bind:result="result" v-bind:key="result">
-        <!-- <h2>{{result.title}}</h2> -->
         <div class="image">
           <img v-bind:src="result.img" alt="data" />
-          <!-- {{result.img.value}} -->
         </div>
-        <!-- <p>{{result.typeLabel}}</p> -->
       </div>
     </div>
 
@@ -338,11 +334,11 @@ export default {
       return data;
     },
     targeted() {
+      // event show id when clicked
       const targetContinent = event.target.id;
-
       console.log(targetContinent);
-      // console.log(this.results)
 
+      // group results with continentLabel
       let groupContinent = _.chain(this.results)
         .groupBy("continentLabel")
         .map((value, key) => ({
@@ -350,9 +346,12 @@ export default {
           items: value
         }))
         .value();
+
+        // filter group on event.id
      groupContinent.filter(data => {
         if (targetContinent === data.continentLabel) {
           console.log(data);
+          // trow data to continent in data()
           this.continents = data
         }
       });

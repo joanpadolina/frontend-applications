@@ -53,6 +53,7 @@ Dit project maakt gebruik van van SPARQL queries om bestanden van het Tropenmuse
 De VUE Framework zorgt voor dat alle dynamische data met een stijling te zien is op de Client side.
 Door Sass the implementeren worden deze stijling weer omgezet naar css bestanden.
 
+
 ### Credits
 
 Laurens

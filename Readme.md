@@ -13,11 +13,11 @@ Het doel van dit project is het ophalen van Data uit de Tropen museum met een Sp
 
 ## Gebouwd met
 
-VueJS - framework
-Node  - server
-NMVW - API data van allerlei rookgerij
-SPARQL - Ophalen van de data
-Webpack - Pagina bouwen
+* VueJS - framework
+* Node  - server
+* NMVW - API data van allerlei rookgerij
+* SPARQL - Ophalen van de data
+* Webpack - Pagina bouwen
 
 ## Git clone
 ```
@@ -52,6 +52,15 @@ Na het builden krijg je een dist map die al je vue comprimeert.
 Dit project maakt gebruik van van SPARQL queries om bestanden van het Tropenmuseum te verkrijgen.
 De VUE Framework zorgt voor dat alle dynamische data met een stijling te zien is op de Client side.
 Door Sass the implementeren worden deze stijling weer omgezet naar css bestanden.
+
+### [Routing](https://github.com/joanpadolina/frontend-applications/wiki/Vue-Introductie)
+Op deze link kan je uitgebreid lezen hoe ik verschillende componenten met elkaar heb kunnen linken door de routes op te stellen.
+
+### [Mapview](https://github.com/joanpadolina/frontend-applications/wiki/Vue-map-data)
+De SVG van heb ik met de hand gemaakt en ervoor gezorgd dat elke groep svg klikable en de juiste data terug krijgt.
+
+### [Vue reflectie](https://github.com/joanpadolina/frontend-applications/wiki/VUE)
+Na veel documentaties lezen en veel uitproberen heb ik geschreven hoe ik uiteindelijk Vue.js heb ervaren.
 
 
 ### Credits

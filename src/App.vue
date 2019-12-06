@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png" />
+    <router-link to='/home'><img class="trlogo" alt="Vue logo" src="./assets/tropenmuseum.png" /> </router-link>
     <div class="con_svg">
       <img class="rlogo" alt="logo roken" src="./assets/roken_logo.svg" />
     </div>

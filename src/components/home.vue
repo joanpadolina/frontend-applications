@@ -5,11 +5,14 @@
     <p>
         Een verzameling van allerlei gekke dingen!
     </p>
+    <Data />
 </div>
 </template>
 
 <script>
+import Data from './Data.vue'
 export default {
-    name: 'home'
+    name: 'home',
+    components: {Data}
 }
 </script>

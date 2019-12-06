@@ -11,6 +11,14 @@ Voor dit project maak ik gebruik van het Framework: **Vue**.
 Roken is nu veel anders dan vroeger. Doordat het meer een dagelijkse behoefte is was een waterpijpen van vroeger meer bijzonder. Daarbij is de website bedoeld om een eigen collectie te maken van de verschillende rookgerei.
 Het doel van dit project is het ophalen van Data uit de Tropen museum met een SparQl code naar een JSON file. Deze data wil daarna ik mijn static html plaatsen en dit dynamisch kunnen renderen. 
 
+## Gebouwd met
+
+VueJS - framework
+Node  - server
+NMVW - API data van allerlei rookgerij
+SPARQL - Ophalen van de data
+Webpack - Pagina bouwen
+
 ## Git clone
 ```
 git clone https://github.com/joanpadolina/frontend-applications.git

@@ -348,6 +348,7 @@ export default {
         .value();
 
         // filter group on event.id
+        //https://gomakethings.com/a-vanilla-js-equivalent-of-lodashs-groupby-method/
      groupContinent.filter(data => {
         if (targetContinent === data.continentLabel) {
           console.log(data);
